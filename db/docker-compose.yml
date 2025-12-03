@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: tp-mongo
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./data:/data
+
+  importer:
+    build: ./app
+    container_name: tp-importer
+    depends_on:
+      - mongo
+    volumes:
+      - ./data:/app/data
+    working_dir: /app
+
