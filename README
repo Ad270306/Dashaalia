@@ -1,0 +1,13 @@
+# Lancer le projet MongoDB + CSV
+
+## Lancer les conteneurs
+
+```bash
+docker-compose up --build
+```
+
+## Tester la connexion depuis Python
+
+```bash
+docker exec -it tp-importer python test_connection.py
+```
