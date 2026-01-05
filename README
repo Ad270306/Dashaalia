@@ -11,3 +11,12 @@ docker-compose up --build
 ```bash
 docker exec -it tp-importer python test_connection.py
 ```
+# Lancer le Frontend (Streamlit)
+
+## 1. Installer les librairies
+
+```bash
+pip install streamlit pandas plotly requests
+
+
+streamlit run frontend.py ("lancer l'application")
